@@ -15,4 +15,4 @@ phases:
   
   post_build:
     commands:
-      - awss3 sync build/ s3://bucketjuuso
+      - aws s3 sync build/s3://bucketjuuso
