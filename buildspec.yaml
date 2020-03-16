@@ -5,11 +5,14 @@ phases:
     runtime-versions:
       nodejs: 10
       
-  pre_build: 
-     npm install
+  pre_build:
+     commands:
+      -npm install
      
   build:
-     npm run build
+    commands:
+     -npm run build
   
   post_build:
-      awss3 sync build/ s3://juusonbucket
+    commands:
+      -awss3 sync build/ s3://bucketjuuso
